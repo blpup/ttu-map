@@ -4,7 +4,7 @@ import { compose, withProps } from "recompose";
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
 import config from "./config"
 import styling from "./map-styling"
-
+import MAP_POINTS from "./map-points"
 
 const MyMapComponent = compose(
   withProps({
@@ -18,7 +18,9 @@ const MyMapComponent = compose(
   withGoogleMap
 )(props => (
   <GoogleMap defaultZoom={17} defaultCenter={{ lat: 33.5841916, lng: -101.8748618 }} defaultOptions={{styles: styling}}>
-    <Marker position={{ lat: 33.5841916, lng: -101.8748618 }} />
+    {props.markers.map(marker => (
+      <Marker position={{ lat: marker.coords.lat, lng: marker.coords.lng }} />
+    ))}
   </GoogleMap>
 ));
 
@@ -27,7 +29,7 @@ const enhance = _.identity;
 const ReactGoogleMaps = () => [
 
 
-  <MyMapComponent key="map" />
+  <MyMapComponent key="map" markers={MAP_POINTS}/>
 ];
 
 export default enhance(ReactGoogleMaps);
