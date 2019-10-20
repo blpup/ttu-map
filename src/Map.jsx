@@ -5,6 +5,7 @@ import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-map
 import config from "./config"
 import styling from "./map-styling"
 import MAP_POINTS from "./map-points"
+import SideMenu from "./side-menu"
 
 const MyMapComponent = compose(
   withProps({
@@ -21,6 +22,7 @@ const MyMapComponent = compose(
     {props.markers.map(marker => (
       <Marker position={{ lat: marker.coords.lat, lng: marker.coords.lng }} />
     ))}
+    <SideMenu/>
   </GoogleMap>
 ));
 
