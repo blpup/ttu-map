@@ -17,7 +17,13 @@ class SideMenu extends Component {
           <p>This place is cool</p>
           <hr/>
           <ul>
-            <li>Food</li>
+            <li>Food
+              <ul>
+                <li>Menchies</li>
+                <li>Burger King</li>
+                <li>Mc Donlads</li>
+              </ul>
+            </li>
             <li>Charge Stations</li>
             <li>Printers</li>
           </ul>
