@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Map from './Map';
+import Map from './Map/Map';
 function App() {
   return (
     <div className="App">
