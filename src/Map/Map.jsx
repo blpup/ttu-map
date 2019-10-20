@@ -3,7 +3,7 @@ import React from "react";
 import { compose, withProps } from "recompose";
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
 import config from "../config"
-import styling from "./map-styling"
+import styling from "./map-styling.css.js"
 import MAP_POINTS from "./map-points"
 import SideMenu from "../SideMenu/side-menu"
 
