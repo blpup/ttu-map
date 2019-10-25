@@ -22,7 +22,7 @@ const MyMapComponent = compose(
     {props.markers.map(marker => (
       <Marker position={{ lat: marker.coords.lat, lng: marker.coords.lng }} />
     ))}
-    <SideMenu/>
+    <SideMenu data={MAP_POINTS}/>
   </GoogleMap>
 ));
 
