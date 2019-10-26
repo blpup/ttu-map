@@ -5,13 +5,11 @@ import {Collapse} from 'react-bootstrap'
 class ListItem extends Component {
   constructor(props) {
     super(props);
-    console.log(this.props)
     this.toggledropDown = this.toggledropDown.bind(this);
     this.state = {collapse: false, data: this.props.data};
   }
 
 toggledropDown() {
-  console.log('in')
   this.setState({open:!this.state.open})
 }
 
