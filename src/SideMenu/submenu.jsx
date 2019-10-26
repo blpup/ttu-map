@@ -1,5 +1,4 @@
-import React, {Component, useState} from 'react';
-import styles from './side-menu-styling.css.js';
+import React, {Component} from 'react';
 import {Collapse} from 'react-bootstrap'
 
 class ListItem extends Component {
@@ -17,8 +16,8 @@ render() {
   return (
     <div className="accordion">
       <div className="list-group">
-        <div class="card">
-          <a href="#" className="list-group-item list-group-item-action" onClick={this.toggledropDown } aria-controls="food" aria-expanded={this.state.open}>{this.state.data.name}</a>
+        <div className="card">
+          <button className="list-group-item list-group-item-action" onClick={this.toggledropDown } aria-controls="food" aria-expanded={this.state.open}>{this.state.data.name}</button>
           <Collapse in={this.state.open}>
             <div className="card-body" id="food">
               {this.state.data.description}

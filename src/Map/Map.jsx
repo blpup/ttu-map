@@ -19,8 +19,8 @@ const MyMapComponent = compose(
   withGoogleMap
 )(props => (
   <GoogleMap defaultZoom={17} defaultCenter={{ lat: 33.5841916, lng: -101.8748618 }} defaultOptions={{styles: styling}}>
-    {props.markers.map(marker => (
-      <Marker position={{ lat: marker.coords.lat, lng: marker.coords.lng }} />
+    {props.markers.map((marker, index) => (
+      <Marker position={{ lat: marker.coords.lat, lng: marker.coords.lng }} key={index}/>
     ))}
     <SideMenu data={MAP_POINTS}/>
   </GoogleMap>
