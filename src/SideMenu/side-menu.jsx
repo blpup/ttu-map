@@ -17,7 +17,7 @@ class SideMenu extends Component {
           <p>This place is cool</p>
           <hr/>
           {
-            this.props.data[0].categories.map((key, index) => <ListItem key={index} data={this.props.data[0].categories[0]}/>)
+            this.props.data[0].categories.map((key, index) => <ListItem key={index} data={this.props.data[0].categories[index]}/>)
           }
         </div>
       </div>
