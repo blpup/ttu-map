@@ -10,7 +10,6 @@ const searchBoxStyles = {
   height: "40px",
   borderRadius: "8px",
   border: "none",
-  boxShadow: "none",
   boxShadow: "0 2px 4px rgba(0,0,0,0.2), 0 -1px 0px rgba(0,0,0,0.02)",
   padding: "20px",
   fontSize:"18px",
